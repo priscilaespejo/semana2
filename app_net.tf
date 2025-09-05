@@ -7,3 +7,15 @@
     
   }
 }
+resource "docker_image" "grafana" {
+  name = "grafana"
+}
+
+resource "docker_image" "redis" {
+  name = "redis"
+}
+
+resource "docker_image" "postgres" {
+  name = "postgres"
+  
+}

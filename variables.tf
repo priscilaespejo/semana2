@@ -1,12 +1,26 @@
-variable "app_network_name" {
-  type        = string
-  description = "Network for app tier (nginx)"
+// VAriables de Postgres
+variable "postgres_user" {
+  type      = string
+  default   = "admin"
 }
-variable "monitor_network_name" {
-  type        = string
-  description = "Network for monitoring (grafana)"
+variable "postgres_password" {  
+  type      = string
+  default   = "password"
+  sensitive = true
 }
-variable "persistence_network_name" {
-  type        = string
-  description = "Network for data services (redis, postgres)"
+variable "postgres_db" {
+  type      = string
+  default   = "appdb"
+}
+variable "postgres_image" {
+  type      = string
+  default   = "postgres:13.22-alpine3.22"
+}
+variable "postgres_volume_name" {
+  type      = string
+  default   = "pg_data"
+}
+variable "postgres_host_port" {
+  type      = number
+  default   = 5432
 }
