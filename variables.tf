@@ -24,3 +24,12 @@ variable "postgres_host_port" {
   type      = number
   default   = 5432
 }
+// Variables de Redis
+variable "redis_image" {
+  type      = string
+  default   = "redis:8.2.1-alpine3.22"  
+}
+variable "redis_port" {
+  type      = number
+  default   = 6379
+}

@@ -16,12 +16,12 @@ resource "docker_network" "app_net" {
   driver  = "bridge"
 }
 
-resource "docker_network" "peristence_net" {
-  name    = "peristence_net"
+resource "docker_network" "persistence_net" {
+  name    = "persistence_net"
   driver  = "bridge"
 }
-resource "docker_network" "mentor_net" {
-  name    = "mentor_net"
+resource "docker_network" "monitor_net" {
+  name    = "monitor_net"
   driver  = "bridge"
 }
 
